@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(89, 129, 70);
+    text-align: center;
+
+}

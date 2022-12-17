@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5" style="width: 70%;">
+    <div class="col">
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'nameapp:all' %}" class="d-block btn btn-primary btn-lg my-5">BACK</a>
+        </div>
+        <h1>Produit : {{ product.name }}</h1>
+        <div>
+            <p>Description : {{ product.description }}</p>
+            <p>Prix : {{ product.price | floatformat:2}}</p>
+            <p>Nombre restant : {{ product.stock }}</p>
+            <img src="{{ product.image }}" alt="image">
+        </div>
+        <td><a href="{% url 'nameapp:product_update' product.id %} ">Update</a></td>
+        <td><a href="{% url 'nameapp:product_delete' product.id %} ">Delete</a></td>
+        {% comment %} buy the product {% endcomment %}
+        <td><a href="{% url 'nameapp:product_buy' product.id %} ">Buy</a></td>
+    </div>
+        
+</div>
+
+{% endblock  %}
